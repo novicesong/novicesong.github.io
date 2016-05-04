@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>誌豪的blog</title>
+  <title>order by null的顺序问题 | 誌豪的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="誌豪的blog">
-<meta property="og:url" content="http://novicesong.github.io/index.html">
+  <meta name="description" content="【sqlserver】：
+sqlserver 认为 null 最小。
+升序排列：null 值默认排在最前。
+要想排后面，则：order by case when col is null then 1 else 0 end ,col
+或者： order by col is null desc, col
+降序排列：null 值默认排在最后。
+要想排在前面，则：order by case when co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="order by null的顺序问题">
+<meta property="og:url" content="http://novicesong.github.io/2016/05/05/mysql-order-by/index.html">
 <meta property="og:site_name" content="誌豪的blog">
-<meta property="og:description">
+<meta property="og:description" content="【sqlserver】：
+sqlserver 认为 null 最小。
+升序排列：null 值默认排在最前。
+要想排后面，则：order by case when col is null then 1 else 0 end ,col
+或者： order by col is null desc, col
+降序排列：null 值默认排在最后。
+要想排在前面，则：order by case when co">
+<meta property="og:updated_time" content="2016-05-04T18:10:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="誌豪的blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="order by null的顺序问题">
+<meta name="twitter:description" content="【sqlserver】：
+sqlserver 认为 null 最小。
+升序排列：null 值默认排在最前。
+要想排后面，则：order by case when col is null then 1 else 0 end ,col
+或者： order by col is null desc, col
+降序排列：null 值默认排在最后。
+要想排在前面，则：order by case when co">
   
     <link rel="alternate" href="/atom.xml" title="誌豪的blog" type="application/atom+xml">
   
@@ -62,9 +81,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-mysql-order-by" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mysql-order-by" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/05/05/mysql-order-by/" class="article-date">
   <time datetime="2016-05-04T17:56:39.000Z" itemprop="datePublished">2016-05-05 01:56:39</time>
@@ -77,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/05/mysql-order-by/">order by null的顺序问题</a>
+    <h1 class="article-title" itemprop="name">
+      order by null的顺序问题
     </h1>
   
 
@@ -118,10 +135,9 @@
     </footer>
   </div>
   
-</article>
-
-
+    
   
+</article>
 
 </section>
         

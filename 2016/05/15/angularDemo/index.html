@@ -10,10 +10,10 @@
 
 方法1
 template.html
-123&amp;lt;div ng-controller=&amp;quot;homeController&amp;quot;&amp;gt;    &amp;#123;&amp;#123;name&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;
+123&amp;lt;div ng-controller=&quot;homeController&quot;&amp;gt;    &amp;#123;&amp;#123;name&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;
 
 app.js
-12345678910var Webmall = angular.module(&amp;apos;Webmall&amp;">
+12345678910var Webmall = angular.module(&apos;Webmall&apos;, []);Webmall.c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angularDemo">
 <meta property="og:url" content="http://novicesong.github.io/2016/05/15/angularDemo/index.html">
@@ -22,21 +22,21 @@ app.js
 
 方法1
 template.html
-123&amp;lt;div ng-controller=&amp;quot;homeController&amp;quot;&amp;gt;    &amp;#123;&amp;#123;name&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;
+123&amp;lt;div ng-controller=&quot;homeController&quot;&amp;gt;    &amp;#123;&amp;#123;name&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;
 
 app.js
-12345678910var Webmall = angular.module(&amp;apos;Webmall&amp;">
-<meta property="og:updated_time" content="2016-05-15T07:39:57.000Z">
+12345678910var Webmall = angular.module(&apos;Webmall&apos;, []);Webmall.c">
+<meta property="og:updated_time" content="2016-05-15T07:42:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularDemo">
 <meta name="twitter:description" content="在angular中如何创建一个路由
 
 方法1
 template.html
-123&amp;lt;div ng-controller=&amp;quot;homeController&amp;quot;&amp;gt;    &amp;#123;&amp;#123;name&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;
+123&amp;lt;div ng-controller=&quot;homeController&quot;&amp;gt;    &amp;#123;&amp;#123;name&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;
 
 app.js
-12345678910var Webmall = angular.module(&amp;apos;Webmall&amp;">
+12345678910var Webmall = angular.module(&apos;Webmall&apos;, []);Webmall.c">
   
     <link rel="alternative" href="/atom.xml" title="誌豪" type="application/atom+xml">
   
@@ -214,24 +214,24 @@ app.js
 </blockquote>
 <h3 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h3><ul>
 <li><p>template.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div ng-controller=&quot;homeController&quot;&gt;</span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"homeController"</span>&gt;</span></span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>app.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var Webmall = angular.module(&apos;Webmall&apos;, []);</span><br><span class="line"></span><br><span class="line">Webmall.config([&apos;$routeProvider&apos;, function ($routeProvider) &#123;</span><br><span class="line">    $routeProvider.otherwise(&#123;redirectTo: &apos;/home&apos;&#125;);</span><br><span class="line"></span><br><span class="line">    $routeProvider.when(&apos;/home&apos;, &#123;</span><br><span class="line">        templateUrl: &apos;views/home/template.html&apos;,</span><br><span class="line">        //controller: HomeController</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Webmall = angular.module(<span class="string">'Webmall'</span>, []);</span><br><span class="line"></span><br><span class="line">Webmall.config([<span class="string">'$routeProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$routeProvider</span>) </span>&#123;</span><br><span class="line">    $routeProvider.otherwise(&#123;redirectTo: <span class="string">'/home'</span>&#125;);</span><br><span class="line"></span><br><span class="line">    $routeProvider.when(<span class="string">'/home'</span>, &#123;</span><br><span class="line">        templateUrl: <span class="string">'views/home/template.html'</span>,</span><br><span class="line">        <span class="comment">//controller: HomeController</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;]);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>homeController.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Webmall.controller(&apos;homeController&apos;, function ($scope) &#123;</span><br><span class="line">    $scope.name = &apos;kkkkk&apos;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Webmall.controller(<span class="string">'homeController'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</span><br><span class="line">    $scope.name = <span class="string">'kkkkk'</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><ul>
 <li><p>template.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>app.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var Webmall = angular.module(&apos;Webmall&apos;, []);</span><br><span class="line"></span><br><span class="line">Webmall.config([&apos;$routeProvider&apos;, function ($routeProvider) &#123;</span><br><span class="line">    $routeProvider.otherwise(&#123;redirectTo: &apos;/home&apos;&#125;);</span><br><span class="line"></span><br><span class="line">    $routeProvider.when(&apos;/home&apos;, &#123;</span><br><span class="line">        templateUrl: &apos;views/home/template.html&apos;,</span><br><span class="line">        controller: HomeController</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Webmall = angular.module(<span class="string">'Webmall'</span>, []);</span><br><span class="line"></span><br><span class="line">Webmall.config([<span class="string">'$routeProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$routeProvider</span>) </span>&#123;</span><br><span class="line">    $routeProvider.otherwise(&#123;redirectTo: <span class="string">'/home'</span>&#125;);</span><br><span class="line"></span><br><span class="line">    $routeProvider.when(<span class="string">'/home'</span>, &#123;</span><br><span class="line">        templateUrl: <span class="string">'views/home/template.html'</span>,</span><br><span class="line">        controller: HomeController</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;]);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>homeController.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var HomeController = function ($scope) &#123;</span><br><span class="line">    $scope.name = &apos;kkkkk&apos;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> HomeController = <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</span><br><span class="line">    $scope.name = <span class="string">'kkkkk'</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
